@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'org.gretty' version '4.1.6'
 }
 
 group = 'kr.huni'
@@ -19,4 +20,9 @@ dependencies {
 
 test {
     useJUnitPlatform()
+}
+
+gretty {
+    contextPath = '/' // 또는 원하는 context path 설정
+    servletContainer = 'tomcat10' // 사용할 톰캣 버전 지정
 }
